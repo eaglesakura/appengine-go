@@ -1,13 +1,13 @@
 ###########################################
 ##  Google App Engine go1.9
-##   - gcloud 228.0.0
+##   - gcloud 246.0.0
 ###########################################
 FROM ubuntu:18.04
 MAINTAINER @eaglesakura
 
-ARG GCLOUD_INSTALL_VERSION="228.0.0"
+ARG GCLOUD_INSTALL_VERSION="246.0.0"
 ARG GCLOUD_DOWNLOAD_URL=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-207.0.0-linux-x86_64.tar.gz
-ARG GOLANG_VERSION=1.9.4
+ARG GOLANG_VERSION=1.11.10
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN  apt update \
@@ -43,4 +43,4 @@ RUN  go get -f -u github.com/eaglesakura/prjdep \
   && go get -f -u github.com/eaglesakura/xpipeline \
   && rm -rf $GOPATH/src \
   && rm -rf $GOPATH/pkg
-ENV GOROOT=/root/tools/google-cloud-sdk/platform/google_appengine/goroot-1.9
+  
