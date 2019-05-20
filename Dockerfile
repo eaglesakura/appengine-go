@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN  apt update \
   && mkdir $HOME/tools \
-  && apt install -y jq python git wget curl unzip tzdata
+  && apt install -y jq python git wget curl unzip tzdata build-essential
 
 ###########################################
 ## Install gcloud tools
