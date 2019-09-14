@@ -1,13 +1,13 @@
 ###########################################
-##  Google App Engine go1.9
-##   - gcloud 246.0.0
+##  Google App Engine go1.12
+##   - gcloud 262.0.0
 ###########################################
 FROM ubuntu:18.04
 MAINTAINER @eaglesakura
 
-ARG GCLOUD_INSTALL_VERSION="246.0.0"
+ARG GCLOUD_INSTALL_VERSION="262.0.0"
 ARG GCLOUD_DOWNLOAD_URL=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-207.0.0-linux-x86_64.tar.gz
-ARG GOLANG_VERSION=1.11.10
+ARG GOLANG_VERSION=1.12.9
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN  apt update \
