@@ -5,9 +5,9 @@
 FROM ubuntu:18.04
 MAINTAINER @eaglesakura
 
-ARG GCLOUD_INSTALL_VERSION="262.0.0"
+ARG GCLOUD_INSTALL_VERSION="271.0.0"
 ARG GCLOUD_DOWNLOAD_URL=https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-207.0.0-linux-x86_64.tar.gz
-ARG GOLANG_VERSION=1.12.9
+ARG GOLANG_VERSION=1.12.13
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN  apt update \
@@ -39,8 +39,7 @@ RUN  mkdir $HOME/tools/gopath \
   && tar xovfz "$HOME/golang.temp.tar.gz" -C "$HOME/tools/" > /dev/null \
   && rm $HOME/golang.temp.tar.gz
 
-RUN  go get -f -u github.com/eaglesakura/prjdep \
-  && go get -f -u github.com/eaglesakura/xpipeline \
+RUN  go get -f -u github.com/eaglesakura/cli/gcloud-auth \
   && rm -rf $GOPATH/src \
   && rm -rf $GOPATH/pkg
   
